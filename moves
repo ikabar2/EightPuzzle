@@ -1,17 +1,45 @@
 
-/*move( [B,B,W,0,B,W,W],[B,0,B,B,W,W,W]).
-move( [0,B,B,B,W,W,W] ,[ B,B,B,W,0,W,W ]).
-move( [B,B,B,W,W,0,W],[B,B,B,W,W,W,0]).
-move( [B,B,W,B,0,W,W ],[B,B,W,B,W,0,W]).
-move( [B,W,B,B,0,W,W], [B,B,0,W,B,W,W]).
-move( [B,0,B,W,B,W,W], [B,B,0,W,W,B,W]).
+% these are the moves
+move([B1,B2,B3,0,W1,W2,W3],[B1,B2,0,B3,W1,W2,W3]).
+move([B1,B2,B3,0,W1,W2,W3],[B1,0,B3,B2,W1,W2,W3]).
+move([B1,B2,B3,0,W1,W2,W3],[0,B2,B3,B1,W1,W2,W3]).
 
-move( [B,B,W,B,W,W,0] , [B,B,W,0,B,W,W]).
-move( [B,0,W,B,B,W,W] ,[B,B,W,B,W,W,0]).
-move( [B,B,W,0,W,B,W], [B,W,B,B,W,0,W]).
-move( [B,B,W,B,0,W,W ],[B,B,W,B,W,0,W]).
-move( [B,W,B,B,W,W,0 ],[B,W,B,0,W,W]).
-move( [B,W,0,B,B,W,W ], [0,B,B,W,B,W,W ]).
+move([B1,B2,0,B3,W1,W2,W3],[B1,0,B2,B3,W1,W2,W3]).
+move([B1,B2,0,B3,W1,W2,W3],[0,B2,B1,B3,W1,W2,W3]).
 
-move( [B,B,W,W,B,0,W] ,[B,0,B,W,W,B,W]).
-move( [0,B,B,W,W,B,W], [B,B,W,W,0,B,W]).*/
+move([B1,0,B2,B3,W1,W2,W3],[0,B1,B2,B3,W1,W2,W3]).
+
+
+move([B1,B2,B3,W1,0,W2,W3],[B1,B2,B3,0,W1,W2,W3]).
+move([B1,B2,B3,W1,0,W2,W3],[B1,B2,0,W1,B3,W2,W3]).
+move([B1,B2,B3,W1,0,W2,W3],[B1,0,B3,W1,B2,W2,W3]).
+
+move([B1,B2,B3,W1,W2,0,W3],[B1,B2,B3,W1,0,W2,W3]).
+move([B1,B2,B3,W1,W2,0,W3],[B1,B2,B3,0,W2,W1,W3]).
+move([B1,B2,B3,W1,W2,0,W3],[B1,B2,0,W1,W2,B3,W3]).
+
+move([B1,B2,B3,W1,W2,W3,0],[B1,B2,B3,W1,W2,0,W3]).
+move([B1,B2,B3,W1,W2,W3,0],[B1,B2,B3,W1,0,W3,W2]).
+move([B1,B2,B3,W1,W2,W3,0],[B1,B2,B3,0,W2,W3,W1]).
+
+/*moving right*/
+move([B1,B2,B3,0,W1,W2,W3],[B1,B2,B3,W1,0,W2,W3]).
+move([B1,B2,B3,0,W1,W2,W3],[B1,B2,B3,W2,W1,0,W3]).
+move([B1,B2,B3,0,W1,W2,W3],[B1,B2,B3,W3,W1,W2,0]).
+
+move([B1,B2,B3,W1,0,W2,W3],[B1,B2,B3,W1,W2,0,W3]).
+move([B1,B2,B3,W1,0,W2,W3],[B1,B2,B3,W1,W3,W2,0]).
+
+move([B1,B2,B3,W1,W2,0,W3],[B1,B2,B3,W1,W2,W3,0]).
+
+move([B1,B2,0,B3,W1,W2,W3],[B1,B2,B3,0,W1,W2,W3]).
+move([B1,B2,0,B3,W1,W2,W3],[B1,B2,W1,B3,0,W2,W3]).
+move([B1,B2,0,B3,W1,W2,W3],[B1,B2,W2,B3,W1,0,W3]).
+
+move([B1,0,B2,B3,W1,W2,W3],[B1,B2,0,B3,W1,W2,W3]).
+move([B1,0,B2,B3,W1,W2,W3],[B1,B3,B2,0,W1,W2,W3]).
+move([B1,0,B2,B3,W1,W2,W3],[B1,W1,B2,B3,0,W2,W3]).
+
+move([0,B1,B2,B3,W1,W2,W3],[B1,0,B2,B3,W1,W2,W3]).
+move([0,B1,B2,B3,W1,W2,W3],[B2,B1,0,B3,W1,W2,W3]).
+move([0,B1,B2,B3,W1,W2,W3],[B3,B1,B2,0,W1,W2,W3]).
